@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: .docker/app/Dockerfile
+    ports:
+      - "4200:4200"
+    volumes:
+      - .:/home/app
+    working_dir: /home/app
+    tty: true
